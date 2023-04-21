@@ -7,28 +7,30 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
 /* ESECUZIONE DEL PROGRAMMA */
 
-/* ELEMENTO DEL DOM */
-const eleGrid = document.querySelector('.grid');
-
-/* GENERAZIONE DELLA GRIGLIA */
-createGrid(100, eleGrid);
-
 /* EVENTLISTENER A TUTTI GLI ELEMENTI DELLA GRIGLIA */
-const listCells = document.querySelectorAll('.cell');
-for (let i = 0; i < listCells.length; i++) {
-	const cell = listCells[i];
-	cell.addEventListener('click',
-		function colorCell() {
-			console.log(this);
-			this.classList.toggle('clicked');
-		}
-	);
-}
+
+const eleGrid = document.querySelector('.grid');
+const eleBtn = document.querySelector('.btn_play');
+
+eleBtn.addEventListener("click", function () {
+	createGrid(100, eleGrid);
+
+});
+
 
 /* DEFINIZIONI DELLE FUNZIONI */
 
-function createGrid(numCells, eleContainer) {
-	for (let i = 0; i < numCells; i++) {
-		eleContainer.innerHTML += '<div class="cell"></div>';
+function createGrid(numCells, eleGrid) {
+	eleGrid.innerHTML = '';
+	for (let i = 1; i < numCells + 1; i++) {
+		eleGrid.innerHTML += `<div class="cell">${i}</div>`;
 	}
+	const listCells = document.querySelectorAll('.cell');
+	
+	for (let i = 0; i < listCells.length; i++) {
+	  const cell = listCells[i];
+	  cell.addEventListener("click", function(){
+		this.classList.toggle("clicked");
+	  });
+  	}
 }
