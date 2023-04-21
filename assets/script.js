@@ -10,12 +10,12 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 /* ELEMENTO DEL DOM */
 const eleGrid = document.querySelector('.grid');
 
-/* Generazione della griglia */
+/* GENERAZIONE DELLA GRIGLIA */
 createGrid(100, eleGrid);
 
-/* EVENTLISTENERE A TUTTI GLI ELEMENTI DELLA GRIGLIA */
+/* EVENTLISTENER A TUTTI GLI ELEMENTI DELLA GRIGLIA */
 const listCells = document.querySelectorAll('.cell');
-for (let i = 1; i < listCells.length; i++) {
+for (let i = 0; i < listCells.length; i++) {
 	const cell = listCells[i];
 	cell.addEventListener('click',
 		function colorCell() {
