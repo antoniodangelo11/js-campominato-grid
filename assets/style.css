@@ -10,6 +10,11 @@
     padding: 80px 0;
 }
 
+.form-select {
+    border: solid 2px rgb(148, 144, 144);
+    margin-inline: 1rem;
+}
+
 .grid {
     width: 600px;
     height: 600px;

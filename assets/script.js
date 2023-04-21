@@ -11,20 +11,23 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
 const eleGrid = document.querySelector('.grid');
 const eleBtn = document.querySelector('.btn_play');
+const eleDiff = document.querySelector('#difficult').value;
 
 eleBtn.addEventListener("click", function () {
 	createGrid(100, eleGrid);
-
 });
 
 
 /* DEFINIZIONI DELLE FUNZIONI */
 
 function createGrid(numCells, eleGrid) {
+	
 	eleGrid.innerHTML = '';
+	
 	for (let i = 1; i < numCells + 1; i++) {
 		eleGrid.innerHTML += `<div class="cell">${i}</div>`;
 	}
+	
 	const listCells = document.querySelectorAll('.cell');
 	
 	for (let i = 0; i < listCells.length; i++) {
