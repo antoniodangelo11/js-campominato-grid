@@ -7,7 +7,8 @@
 }
 
 .content {
-    padding: 80px 0;
+    height: 650px;
+    padding: 120px 0;
 }
 
 .form-select {
@@ -16,9 +17,19 @@
 }
 
 .grid {
-    width: 600px;
-    height: 600px;
 	box-sizing: content-box;
+}
+
+.grid_easy {
+    width: 600px;
+}
+
+.grid_medium {
+    width: 540px;
+}
+
+.grid_hard {
+    width: 420px;
 }
 
 .cell {
