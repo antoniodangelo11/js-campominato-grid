@@ -4,7 +4,7 @@
 
 .bkg_aqua {
     background-color: #7FFFD4;
-    height: 700px;
+    height: 750px;
 }
 
 .content {
@@ -45,4 +45,11 @@
 
 .clicked {
 	background-color: rgb(40, 73, 223);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
